@@ -67,6 +67,14 @@ describe "#translate" do
 
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+  it "output is capitalized if input was" do
+    s = translate("in What world")
+    expect(s).to eq("inay Atwhay orldway")
+  end
   # * retain the punctuation from the original phrase
+  it "retains punctuation from original phrase" do
+    s = translate("what Nerds, bob?")
+    expect(s).to eq("atwhay Erdsnay, obbay?")
+  end
 
 end
